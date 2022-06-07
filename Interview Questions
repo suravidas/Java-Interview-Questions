@@ -1,0 +1,1396 @@
+https://howtodoinjava.com/java/collections/hashmap/how-hashmap-works-in-java/
+
+concurrent hashmap
+https://www.geeksforgeeks.org/concurrenthashmap-in-java/
+
+
+hashtable
+https://www.geeksforgeeks.org/hashtable-in-java/
+
+equals and hashcode 
+https://www.geeksforgeeks.org/equals-hashcode-methods-java/
+
+Why to Override equals(Object) and hashCode() method ?
+https://www.geeksforgeeks.org/override-equalsobject-hashcode-method/
+
+
+strings
+https://www.geeksforgeeks.org/strings-in-java/
+https://www.journaldev.com/797/what-is-java-string-pool
+https://www.geeksforgeeks.org/interning-of-string/
+
+
+why strings immutable?
+https://www.baeldung.com/java-string-immutable
+
+
+These are some more reasons of making String immutable:
+
+    The String pool cannot be possible if String is not immutable in Java. A lot of heap space is saved by JRE. The same string variable can be referred to by more than one string variable in the pool. String interning can also not be possible if the String would not be immutable.
+    If we don't make the String immutable, it will pose a serious security threat to the application. For example, database usernames, passwords are passed as strings to receive database connections. The socket programming host and port descriptions are also passed as strings. The String is immutable, so its value cannot be changed. If the String doesn't remain immutable, any hacker can cause a security issue in the application by changing the reference value.
+    The String is safe for multithreading because of its immutableness. Different threads can access a single "String instance". It removes the synchronization for thread safety because we make strings thread-safe implicitly.
+    Immutability gives the security of loading the correct class by Classloader. For example, suppose we have an instance where we try to load java.sql.Connection class but the changes in the referenced value to the myhacked.Connection class does unwanted things to our database.
+
+https://dzone.com/articles/how-to-create-an-immutable-class-in-java
+
+
+https://www.geeksforgeeks.org/multithreading-in-java/
+
+https://www.geeksforgeeks.org/thread-pools-java/
+
+PRIORITY QUEUE COMPARATOR
+https://www.geeksforgeeks.org/implement-priorityqueue-comparator-java/
+
+MAX HEAP DECLARATION
+ PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+  PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+  
+  
+  
+  https://stackoverflow.com/questions/11003155/change-priorityqueue-to-max-priorityqueue
+  
+  
+https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
+
+    Comparable is meant for objects with natural ordering which means the object itself must know how it is to be ordered. For example Roll Numbers of students. Whereas, Comparator interface sorting is done through a separate class.
+    Logically, Comparable interface compares “this” reference with the object specified and Comparator in Java compares two different class objects provided.
+    If any class implements Comparable interface in Java then collection of that object either List or Array can be sorted automatically by using Collections.sort() or Arrays.sort() method and objects will be sorted based on there natural order defined by CompareTo method.
+    A basic differentiating feature is that using comparable we can use only one comparison. Whereas, we can write more than one custom comparators as you want for a given type, all using different interpretations of what sorting means. Like in the comparable example we could just sort by only one attribute, i.e., year but in the comparator, we were able to use different attributes like rating, name, and year as well.
+    
+    IMPLEMENTATION OF HASHSET
+    https://www.geeksforgeeks.org/hashset-in-java/
+    
+    
+    final
+    https://www.geeksforgeeks.org/final-keyword-java/
+    
+    Collections
+https://www.geeksforgeeks.org/difference-between-hashmap-and-hashset/
+https://www.geeksforgeeks.org/differences-between-hashmap-and-hashtable-in-java/
+https://www.javatpoint.com/linkedhashmap-vs-hashmap-in-java
+https://www.geeksforgeeks.org/differences-treemap-hashmap-linkedhashmap-java/
+When to use an ArrayList, Vector, LinkedList?
+https://www.w3spoint.com/arraylist-linkedlist-vector-java
+https://medium.com/zero-equals-false/arraylist-vs-linkedlist-vs-vector-22e1721a66b0
+
+When to use ArrayList over a HashSet or vice-versa?
+https://www.geeksforgeeks.org/difference-between-arraylist-and-hashset-in-java/
+
+wait():
+When you call wait method on the object then it tell threads to give up the lock and go to sleep state unless and until some other thread enters in same monitor and calls notify or notifyAll methods on it.
+notify():
+When you call notify method on the object, it wakes one of thread waiting for that object. So if multiple threads are waiting for an object, it will wake of one of them. Now you must be wondering which one it will wake up. It actually depends on OS implementation.
+notifyAll() :
+notifyAll will wake up all threads waiting on that object unlike notify which wakes up only one of them.Which one will wake up first depends on thread priority and OS implementation.
+
+https://java2blog.com/print-sequence-3-threads-java/
+Print sequence using 3 threads in java
+
+Print even and odd numbers in increasing order using two threads in Java
+https://www.geeksforgeeks.org/print-even-and-odd-numbers-in-increasing-order-using-two-threads-in-java/
+
+join
+https://beginnersbook.com/2015/03/thread-join-method-in-java-with-example/
+
+singleton class in java
+https://www.geeksforgeeks.org/singleton-class-java/
+https://www.geeksforgeeks.org/singleton-design-pattern/
+
+Logger : Singleton classes are used in log file generations. Log files are created by the logger class object. Suppose an application where the logging utility has to produce one log file based on the messages received from the users. If there is multiple client application using this logging utility class they might create multiple instances of this class and it can potentially cause issues during concurrent access to the same logger file. We can use the logger utility class as a singleton and provide a global point of reference so that each user can use this utility and no 2 users access it at the same time.
+
+https://www.geeksforgeeks.org/top-20-java-multithreading-interview-questions-answers/?ref=rp
+
+https://www.geeksforgeeks.org/synchronized-in-java/
+
+https://www.geeksforgeeks.org/method-block-synchronization-java/
+https://www.tutorialspoint.com/difference-between-object-level-lock-and-class-level-lock-in-java
+https://www.geeksforgeeks.org/class-level-lock-in-java/
+https://www.geeksforgeeks.org/jvm-works-jvm-architecture/
+https://www.geeksforgeeks.org/garbage-collection-java/
+
+https://www.youtube.com/watch?v=akFRa58Svug&t=608s
+https://www.infoworld.com/article/2075692/avoid-synchronization-deadlocks.html
+
+https://mkyong.com/java/java-executorservice-examples/
+https://www.geeksforgeeks.org/java-util-concurrent-package/
+
+FRESHWORKS ROUND 1
+
+Find the k closest points to origin
+Time complexity
+Optimized approch priority queue
+real world kafka use case in company
+how do yoi deploy code
+
+
+INFORMATICA ROUND 1
+
+dIFFERENCE BETWEEN HASHMAP AND HASHSET
+WHAT IS HASHSET
+WHAT IS DIFFERNCE BETWEEN HASHMAP AND HASHTABLE
+
+HASHMAP HAS MANY CONSTRUCTORS SO WHAT IS LOAD FACTOR 0.75
+WHAT US LOAD FACTOR
+WHAT IS FAIL SAFE AND FAIL SAFE ITERATOR
+WHAT IS CLASS LOADER AND DIFFERENT TYPES OF CLASS LOADER
+WHAT IS FINAL FINALLY AND FINALIZE
+IS FINALLY BLOCK ALWAYS REQUIRED
+WHAT IS CHECKED AND UNCHECKED EXCEPTION AND GIVE EXAMPLES
+WHAT IS ROOT CLASS OF EXCEPTION
+WHAT IS COLLISION IN HASN MAP AND EXPLAIN IT
+WHAT IS STRING IMMUTABLE AND WHAT HAPPENS INSIDE
+WHAT IS STRING BUFFER AND STRING BUILDER
+REGARDING SYNCHRONISATION ALSO
+
+ALSO IS HASHMAP SYNCHRONIZED
+IF HASHMAP CAN BE DONE COLLECTION.SYNCHRONIZED(MP)
+THEN WHY CONCURRENT HASHMAP
+WHAT IS CONCURRENT HASHMAP
+EXPLAIN
+
+WHAT IS FILE NOT FOUND EXCEPTION (RUN TIME OR COMPILE TIME)
+WHEN IN TRY BLOCK WE HAVE SYSTEM.EXIT() THEN WILL CATCH AND FINALLY BLOCK...EXECUTE
+WHICH IS SYNCHRONISED..THREAD OR THREAD BUFFER
+WHAT IS INTERFACE AND ABSTRACT CLASS (DIFFERNEE BETWEEN THEM)
+
+HOW IS OBJECT GARBAGE COLLECTED IN JAVA
+
+
+GIVEN A STRING S=aaabbbccddddd
+O/P= a3b3c2d5
+encrypt
+
+Given a string a3b2c1d2
+0/P= aaabbcdd
+decrypt
+
+
+INFORMATICA ROUND 2
+Find the next smaller element of each element in array
+
+[[4, 8, 5, 2, 25}
+[2,2,2,-1]
+
+brute force and stack based approach and scan from right side..
+
+
+why do we use kafka to communicate between services
+any other way to communicate
+why we use messaging system
+
+what is garbage collection in java.how its done
+
+
+FRESHWORKS ROUND 2
+Find the longest palindromic substring.
+brute force,recusrsion,corner case,tabular and odd length,even length
+
+db design of project
+what if parts do not come from other service./
+
+
+
+
+import java.util.Arrays;
+import java.util.Stack;
+
+class Main
+{
+	// Find the next smaller element for every array element
+	public static int[] findNextGreaterElements(int[] input)
+	{
+		// base case
+		if (input == null) {
+			return input;
+		}
+
+		int[] result = new int[input.length];
+		Arrays.fill(result, -1);
+
+		// create an empty stack
+		Stack<Integer> s = new Stack<>();
+
+		// do for each element
+		for (int i = 0; i < input.length; i++)
+		{
+			// loop till we have a smaller element on top or stack becomes empty.
+
+			// Keep popping elements from the stack larger than the current
+			// element, and set their next smaller element to the current element
+
+			while (!s.isEmpty() && input[s.peek()] > input[i]) {
+				result[s.pop()] = input[i];
+			}
+
+			// push current "index" into the stack
+			s.push(i);
+		}
+
+		return result;
+	}
+
+	public static void main(String[] args)
+	{
+		int[] input = { 2, 7, 3, 5, 4, 6, 8 };
+
+		int[] result = findNextGreaterElements(input);
+		System.out.println(Arrays.toString(result));
+	}
+}
+
+
+
+NEXT GREATER ELEMENT FOR EVERY ARRAY ELEMENY
+
+while (!s.isEmpty() && input[s.peek()] < input[i]) {
+				result[s.pop()] = input[i];
+			}
+
+
+FRESHWORKS ROUND 3
+FIND ALL PAIRS HAVING GIVEN SUM IN ARRAY
+
+I GAVE SOLN FOR ALL ELEMENTS HAVING GIVEN SUM EQUAL TO K IN ARRAY
+
+HE SAID OK
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class Test {
+
+    static void sumArrays(int arr[],int n,int target) {
+
+        int cur_sum = 0;
+        HashMap<Integer, List<Integer>> mp = new HashMap<>();
+        //for 0 sum,corner case
+        if (!mp.containsKey(0)) {
+            mp.put(0, new ArrayList<>());
+            mp.get(0).add(-1);
+        }
+
+        for (int i = 0; i < n; i++) {
+            cur_sum += arr[i];
+            if (mp.containsKey(cur_sum - target)) {
+                List<Integer> vals = mp.get(cur_sum - target);
+                for (Integer val : vals) {
+                    canprintArray(arr, val + 1, i);
+                }
+
+            }
+            if (!mp.containsKey(cur_sum)) {
+                mp.put(cur_sum, new ArrayList<>());
+                mp.get(cur_sum).add(i);
+            }
+
+        }
+    }
+    static void canprintArray(int arr[],int i,int j)
+    {
+        System.out.println(IntStream.range(i,j+1).mapToObj(l->arr[l]).collect(Collectors.toList()));
+    }
+    public static void main(String[] args)
+    {
+        int arr[]={3, 5, -2, 1, 2, 0};
+        int n= arr.length;
+        int target=3;
+        sumArrays(arr,n,target);
+    }
+}
+
+WHAT IS ADVANTAGE OF DOCKER
+WHAT IS LAYERS IN DOCKER
+WHY DOCKER AND NOT ZIP FILE
+DIFFERENCE BETWEEN GIT MERGE AND GIT REBASE
+WHY KAFKA AND NOT RABBIT MQ
+WJAT IS KAFKA. AND EXPLAIN KAFKA WHAT IS IT USED FOR
+
+
+paypal round 1
+
+https://www.techiedelight.com/rearrange-array-positive-negative-numbers-alternate-positions/
+
+partion logic quick sort 0 as pivot element
+
+import java.util.Arrays;
+ 
+class Main
+{
+    // Partitioning routine of Quicksort
+    public static int partition(int[] A)
+    {
+        int j = 0;
+        int pivot = 0;    // consider 0 as a pivot
+ 
+        // each time we find a negative number, `j` is incremented,
+        // and a negative element would be placed before the pivot
+        for (int i = 0; i < A.length; i++)
+        {
+            if (A[i] < pivot)
+            {
+                // swap `A[i]` with `A[j]`
+                int temp = A[i];
+                A[i] = A[j];
+                A[j] = temp;
+ 
+                j++;
+            }
+        }
+ 
+        // `j` holds the index of the first positive element
+        return j;
+    }
+ 
+    // Function to rearrange a given array such that it contains positive
+    // and negative numbers at alternate positions
+    public static void rearrange(int[] A)
+    {
+        // partition a given array such that all positive elements move
+        // to the end of the array
+ 
+        int p = partition(A);
+ 
+        // swap alternate negative elements from the next available positive
+        // element till the end of the array is reached, or all negative or
+        // positive elements are exhausted.
+ 
+        for (int n = 0; (p < A.length && n < p); p++, n += 2)
+        {
+            // swap `A[n]` with `A[p]`
+            int temp = A[n];
+            A[n] = A[p];
+            A[p] = temp;
+        }
+    }
+ 
+    public static void main(String[] args)
+    {
+        int[] A = { 9, -3, 5, -2, -8, -6, 1, 3 };
+ 
+        rearrange(A);
+ 
+        // print the rearranged array
+        System.out.println(Arrays.toString(A));
+    }
+}
+o(n)
+
+for storing relative order need to see
+
+
+Q 1 :-Given a list of tickets, find itinerary in order using the given list.
+
+
+Example: 
+
+
+
+Input:
+
+"Chennai" -> "Banglore"
+
+"Bombay" -> "Delhi"
+
+"Goa" -> "Chennai"
+
+"Delhi" -> "Goa"
+
+
+
+Output: 
+
+Bombay->Delhi, Delhi->Goa, Goa->Chennai, Chennai->Banglore,
+
+
+// Java program to print itinerary in order
+import java.util.HashMap;
+import java.util.Map;
+
+public class printItinerary
+{
+	// Driver function
+	public static void main(String[] args)
+	{
+		Map<String, String> dataSet = new HashMap<String, String>();
+		dataSet.put("Chennai", "Banglore");
+		dataSet.put("Bombay", "Delhi");
+		dataSet.put("Goa", "Chennai");
+		dataSet.put("Delhi", "Goa");
+
+		printResult(dataSet);
+	}
+
+	// This function populates 'result' for given input 'dataset'
+	private static void printResult(Map<String, String> dataSet)
+	{
+		// To store reverse of given map
+		Map<String, String> reverseMap = new HashMap<String, String>();
+
+		// To fill reverse map, iterate through the given map
+		for (Map.Entry<String,String> entry: dataSet.entrySet())
+			reverseMap.put(entry.getValue(), entry.getKey());
+
+		// Find the starting point of itinerary
+		String start = null;
+		for (Map.Entry<String,String> entry: dataSet.entrySet())
+		{
+			if (!reverseMap.containsKey(entry.getKey()))
+			{
+				start = entry.getKey();
+				break;
+			}
+		}
+
+		// If we could not find a starting point, then something wrong
+		// with input
+		if (start == null)
+		{
+		System.out.println("Invalid Input");
+		return;
+		}
+
+		// Once we have starting point, we simple need to go next, next
+		// of next using given hash map
+		String to = dataSet.get(start);
+		while (to != null)
+		{
+			System.out.print(start + "->" + to + ", ");
+			start = to;
+			to = dataSet.get(to);
+		}
+	}
+}
+
+
+
+
+INFORMATICA ROUND 1
+RIGHT VIEW OF BINARY TREE
+CHECK IF A PAIR EXISTS WITH GIVEN SUM 
+USING HASHSET AND TWO POINTERS
+WHICH ONE WILL WORK WITH DUPLICATES BETTER-TWO POINTERS
+TIME COMPLEXITY OF BOTH APPROACHES
+
+
+DIFFERENCE BETWEEN MONGODB AND SQL
+WHAT IS MICROSERVICE ARCHITECTURE
+ADVANTAGES
+MONGO DB WITH JOINS HOW CAN WE ACHIEVE
+
+
+ROUND 2
+FEATURES OF JAVA 8
+WHAT ALL
+WHEN TO USE FOREACH AND WHEN TO USE STREAMS
+CHECK IF TWO TREES ARE MIRROR OF EACH OTHER
+DELETE A NODE IN LINKED LIST GIVEN THE DATA X=6
+
+WHAT DESIGN PATTERS USED
+DESIGN NEWS FEED APP
+WHAT DESIGN PATTERN USED
+PUBLISH SUBSCRIBE
+
+ROUND 3
+SUPPOSE DIFFERENT DB SOURCES,ONE IS EXCEL,ONE IS DATABASE,NEED TO COMBONE ALL DATAAND SHOW IT TO DIRECTOR
+ONE IS FINANCE DATA,ONE IS STUDENT DEPARTMENTS DATA,HOW TO AGGREGATE AND SHOW TO USER
+
+USE MULTITHREADING
+
+DIFFERENCE BETWEEN MONOITHIC AND MICROSERVICE
+
+
+---------------
+
+
+
+SIEMENS
+--------
+
+
+
+JP MORGAN
+TELL ABOUT PROJECT
+WHAT ISSUES IN PROJECT,IN PRODUCTION
+WHAT DESIGN CHANGES
+WHAT RELATIONSHIPS IN DB
+WHAT JOINS US USED
+WHAT IS SELF JOIN,GIVE EXAMPLE REAL LIFE
+WHAT LIBRARIES IN SPRING BOOT
+U USED
+WHAT DEPENDENCIES...SPRING JPA SPRING STARTER
+HE ASKED NOT USED HIBERNATE?
+REVERESE A DECIMAL NUMBER WITH AND WITHOUT STRING
+CAN WE OVEERIDE STATIC METHODS
+USE OF PRIVATE CONSTRUCTOR
+WHERE USED PRIVATE CONSTRUCTOR
+WHAT IS SINGLETON CLASS
+HOW CAN WE ACHIEVE TWO OBJECT CREATIONB WITH SINBGLETON CLASS
+IF WE USE TWO STATIC OBJECTS
+CHECK IF NULL THAT CONDITION
+HOW TO ACHIEVE RANDOMNESS OF OBJECT CREATION IN SINGLETIN PATTERN
+IF WE CREATE THITD OBJECT,IT  RETURNS ANY INSTANCE CREATED OUT OF THREE OBJECTS
+HE TOLD TO USE RANDOM FUNCTIONS
+
+WORKING OF HASHSET
+HOW CAN WE ACHIEVE WORST CASE COMPLEXITY IN HASHMAP
+EXPLANE WORST COMPLEXITY HASHMAP
+HOW TO REDUCE IT
+WHAT MODIFICATIONS TO ACHIEVE WORST CASE COMPLEXITY,CHANGE THE HASH FUNCTION
+
+WHT FEATURES OF JAVA 8 U USED
+difference between sql and no  sql
+why mongo and oracle db used in projects
+what steps u would take to optimize sql query
+indexes,sub select queries
+how to make joins faster
+what about cost of sql query from execution plan
+will it be affected
+what about rank function in oracle
+
+
+reverese a decimal number
+
+
+JP MORGAN ROUND 2
+
+What all things u keep in mind while designing APIs
+like from ui and backend
+what all things u need to have in backend
+for eg take upload api
+what from formdata in ui and backend multipart request
+what if upload multiple files and single file
+then multipart[] and multipart in request parameter
+how to control size of file
+will it throw an error if exceeds
+
+lets say you have a hashpap with key as username,emailid and id
+and value as user object
+what all things u need to have for hashmap to function efficiently?
+
+we need to override and hashcode maethid with those 3 fields of key
+
+lets say you have a class woth method
+and we extend that class with metthod overriding
+what if the method in base class throws null poinyer exception,what will happen to the overriden method
+how will we catch tat excepiom
+
+hmmm the root class exception will propagate to child class too so we need to handle it
+
+
+in ur project how have u handled exceptions in various layers
+in ur spring boot what sort of validatuons u have done for the request to be sanitised
+
+impleneted filete,there authorixation code for roles
+apart from that use @non null and @min and @max
+and business level validations and throwing exception if that value not there
+how the user will understand the messages
+using log messages,exception stack trace and custom error codes in gigsky
+
+
+now suppose we have an arraylist and we perform multiple add remove 
+should we use another data structure to minimise the cost ,or should we use arraylist itself
+we can use doubly linked list
+addfirst addlast methods etc
+
+in array list random access using indexes
+
+in sql soide
+what have u used
+have u used relationships
+have u used stored procedures
+what if u desugn a table and that is read heavy what all things u keep in mind
+eg..use indexes,how those indexes mainatain a separate table and they sort it so that we can fetch it and fetch the record from table
+for eg we need to search email id,
+we create index of email id and sort it...so search is faster
+
+we need to read table based on email ids
+
+now multithreading
+suppose a thread t3 starts first,then thread t1 starts and first and then t3 starrts and finishes
+use join
+
+now suppose if a thread enters a deadlock state ,we want that thread to execute for a particular amt of time
+use executor service.scheduledthread methiod
+
+code question
+
+List of random numbers
+pairs of elements present there
+
+
+
+1,1,2,2,3
+
+not necessary that list is sorted
+
+1133561122376
+1-2
+3-1
+5-0
+6-1
+2-1
+7-0
+
+count pairs of elements present
+
+
+1,1,1
+
+
+
+
+
+
+PSEUDO CODE
+
+APPROACH 1
+HashMap<Integer,Integer> mp=new HashMap<>();
+count the frequency of each of the elements in array
+
+
+Iterate through each of the keys in Hashmap mp
+   for each of the keys,divide the value of the key by 2 and store it in variable x
+    	that is x=Math.floor(Mp.get(key)/2);
+
+	System.out.println(“Key”:mp.getKey())
+	System.out.println(“Pair count”:x)
+
+
+Complexity:o(n)
+space complexity:o(n)
+
+
+APPROACH 2
+
+
+Arrays.sort(array);
+For(int i=0;i<n;i++)
+{
+While(are[i]==arr[i+1] && i<n)
+{
+count++
+i++;
+}
+
+print arr[i] and count/2;
+
+Count =1//for next set of duplicate elements;
+}
+
+Complexity(O(nlogn+n)
+
+
+
+THIRD ROUND VP
+Why jpmc not oracle
+how good at voding
+role for 5-6 years u only half
+
+given a string give the count of vowels in it
+a-3
+e-2
+
+
+also sort the values based on frequency
+
+public class Test {
+
+
+    static void numberOfVowels(String s)
+    {
+        Map<Character,Integer> mp=new HashMap<>();
+        mp.put('a',0);
+        mp.put('e',0);
+        mp.put('i',0);
+        mp.put('o',0);
+        mp.put('u',0);
+        int n=s.length();
+        List<Character> chars= Arrays.asList('a','e','i','o','u');
+        for(int i=0;i<s.length();i++)
+        {
+            if(chars.contains(s.charAt(i))) {
+                if (mp.containsKey(s.charAt(i))) {
+                    mp.put(s.charAt(i), mp.get(s.charAt(i)) + 1);
+                } else {
+                    mp.put(s.charAt(i), 0);
+                }
+            }
+
+        }
+//implement a comparator with hashmap
+        PriorityQueue<Integer> p=new PriorityQueue<>((a,b)->mp.get(a)-mp.get(b));
+        for(Character c:mp.keySet())
+        {
+            p.add(mp.get(c));
+        }
+
+
+        while(!p.isEmpty())
+        {
+            System.out.println()
+        }
+
+
+
+        for(Map.Entry<Character,Integer> m:mp.entrySet())
+        {
+            System.out.println("Character "+m.getKey()+" "+"Count "+m.getValue());
+        }
+
+
+
+//        int n=s.length();
+//        int count=0;
+//        List<Character> chars= Arrays.asList('a','e','i','o','u');
+//        for(int i=0;i<s.length();i++)
+//        {
+//            if(chars.contains(s.charAt(i)))
+//            {
+//                count++;
+//            }
+//        }
+//        return count;
+
+    }
+    public static void main(String[] args)
+    {
+        String s="aeihhfghhhuiiiieeeesssssahhhh";
+        numberOfVowels(s);
+
+    }
+}
+
+//how many times a
+
+
+
+
+
+
+SAP LABS 1ST ROUND
+FIND LCA OF BST
+CHECK IF THE PAIR EXISTS WITH GIVEN SUM O(N)
+EXPLAIN MULTITENANCY
+WHAT IF DIFFERENT CUSTOMERS ACCESSING THE SAME APPLICATION
+SHOUKD WE HAVE DIFFERENT DBS OR WHAT ELSE
+WHAT SHOULD BE THE APPROACH
+DIFFERNCE BETWEEN SQL AD NO SQL
+WHAT IS IOC IN SPRING BOOT
+WHAT ARE THE TYPES OF SCOPES IN SPORING BOOT.EXPLAIN
+
+2ND ROIND
+
+
+GROUPON
+1ST ROUND
+Design a data structure that supports insert, delete, search and getRandom in constant time
+
+https://www.geeksforgeeks.org/design-a-data-structure-that-supports-insert-delete-search-and-getrandom-in-constant-time/
+
+FIND THE LENGTH OF LARGEST CONTIGUOUS SUBARRAY HAVING SUM 0
+USE HASHMAP
+
+0(n)
+WHAT IS COLLWCTION
+WHEN TO USE ARRAYLIST AND LINKEDLIST
+IS COLLECTION A CLASS
+
+
+GOLDMAN SACHS
+
+CODERPAD ROUND
+
+FIND THE MISSING LETTERS IN A PANAGRAM IN SORTED ORDER AND IRRESPECTIVE OF CASE
+Represent the fraction of two numbers in the string format
+
+https://www.geeksforgeeks.org/represent-the-fraction-of-two-numbers-in-the-string-format/
+NOT SURE IF SELECTED
+
+TARGET 1 ROUND
+WHAT ARE DIFFERENT WAYS TO CREATE OBJECT
+https://dzone.com/articles/5-different-ways-to-create-objects-in-java-with-ex
+
+WHAT IS DIFFERENCE BETWEEN ABSTRACT CLASS AND INTERFACE
+WHEN DO WE USE WHAT,SPECIFIC DIFFERENCE
+MULTIPLE IHERITANCE OF ITERFANCE,ABSTRACT CLASS CONSTRUCTOR...ETC
+
+SUPPOSE WE WANT TO GENERATE 5 OBJECTS AND 6TH TIME WE GET THE 5 TH OBJECT
+USE SINGLETON,INTRODUCE STATIC COUNT IF COUNT<5
+
+public class LimitClass {
+
+    private static LimitClass limInstance;
+    public static int objCount = 0;
+
+    private LimitClass(){
+        objCount++;
+    }
+
+    public static synchronized LimitClass getLimInstance(){
+        if(objCount < 5 ){
+            limInstance = new LimitClass();
+        }
+        return limInstance;
+    }
+}
+
+public class LimitObjectCreationTest {
+
+    public static void main(String[] args) {
+
+        LimitClass obj1 = LimitClass.getLimInstance();
+        LimitClass obj2 = LimitClass.getLimInstance();
+        LimitClass obj3 = LimitClass.getLimInstance();
+        LimitClass obj4 = LimitClass.getLimInstance();
+        LimitClass obj5 = LimitClass.getLimInstance();
+        LimitClass obj6 = LimitClass.getLimInstance();
+
+        System.out.println(obj1);
+        System.out.println(obj2);
+	
+	
+	
+	
+	
+	what is static
+	what is immutable class
+	what if immutable class has mutable object/collection
+	what is working of hashmap
+	what data structure for nodes in hashmap
+	is hashmap thead safe
+	collections.synchronized map
+	whay concuurent
+	for get operation,any lock required in concurrent hashmap
+	
+	ways to break singleton pattern
+	
+	in deserilaization,any constructor used to create object?
+	what if we have parameterized constructor?what if we create object?error
+	should have a non parameterized constructor
+	what error will throe?compile/run time
+	
+	--------
+	
+	microsoft 1 st round
+	Next Greater Frequency Element
+	https://www.geeksforgeeks.org/next-greater-frequency-element/
+	
+	
+	
+	JPA two transaction updating the same rows
+	https://stackoverflow.com/questions/45544248/jpa-two-transaction-updating-the-same-rows
+	
+	
+	
+	
+	SAP LABS 2nd round
+	Producer consumer problem write what is the problem with code
+	then write the synchronized code
+	
+	will attach doc of spring boot desig question
+	
+	what will you do if two request try to update the same records at same time
+	use version-optimistic locking
+	
+	3RD ROUND
+	ALL HR Questions
+	what is saas paas
+	what is difference between soap and rest
+	what is rest
+	what we used earlier than rest in software web services
+	
+	
+	4TH ROUND
+	Give use case of Kafka in project
+	design spring boot apis
+	getTotalMarksOfAstudent
+payFees
+register a student
+capture marks for a student for different terms/semester
+paument of fees for a student
+
+
+src
+    main
+         java
+           controller
+                StudentController
+                FeesController
+                
+           Service
+                StudentService(Interface)
+                PaymentService(Interface)
+               Impl(folder)
+                      StudentServiceImpl
+                      PaymentServiceImpl
+           repository
+               StudentRepository
+
+
+
+@RequestMapping(“studentService”)
+Class StudentController
+{
+
+@Autowired
+Private StudentService studentService;
+
+ @RequestMapping(“/getAllStudents”,method=RequestMethod.GET)
+  Public List<StudentDto> getListOfStudents()
+{
+   Return studentService.getAllStudents();
+}
+
+
+
+
+
+
+GOLDMAN SACHS
+1st round
+
+/*  Round-1 started ****/
+Your previous Plain Text content is preserved below:
+
+
+
+
+"Chennai" -> "Banglore"
+"Bombay" -> "Delhi"
+"Goa"    -> "Chennai"
+"Delhi"  -> "Goa"
+
+
+
+//find the starting point
+//store inputs in a map for the given question
+//store the destination keys of those inputs as keys in destMap and values as starting point
+
+String startingPoint=null;;
+for(Map.Entry<String,String> originalMp:srcMap.entrySet())
+{
+if(!destMap.containsKey(originalMp.getKey())
+{
+startingPoint=originalMp.getKey();
+break;
+}
+}
+if(startingPoint==null/)
+{
+return "No startPoint";
+}
+
+
+
+Problem NUmber -2 
+
+Count total possible combinations of n-digit numbers in a mobile keypad
+
+Input:  n = 2
+ 
+Output: 36
+ 
+Exp :-  [00, 08, 11, 12, 14, 21, 22, 23, 25, … ,96, 98, 99]
+
+{ '1', '2', '3' },
+
+{ '4', '5', '6' },
+{ '7', '8', '9' },
+{ '*', '0', '#' }
+
+Key,Value
+
+2,{22,25,23}
+//no diagonal neighbours
+
+rowArray=[0,-1,0,1];
+colarray=[-1,0,1,0];
+(0-1,-10,10,
+
+for
+ 
+ /*  Round-1 Ended ****/
+ */}
+ 
+ 
+ 2nd round
+ Red Blue Green
+ 
+ Input: N = 3, cost[][3] = {{14, 2, 11}, {11, 14, 5}, {14, 3, 10}}
+ 
+ 
+ Objective: Paint all houses at optimal/minimum cost overall
+ 
+ Constraints:
+ 
+ No two adjacent houses are of same colour.
+ 
+ length 3
+ total 2
+ 
+  
+  14   2  11
+  13  25   7
+  21  10  23
+ 
+ 
+ 
+ for(int i=1;i<R;i++)
+ {
+   cost[i][0]+=Math.min(cost[i-1][1],cost[i-1][2]);
+   cost[i][1]+=Math.min(cost[i-1][0],cost[i-1][2]);
+   cost[i][2]+=Math.min(cost[i-1][0],cost[i-1][1]);
+ }
+ 
+ int length=cost.length-1;
+ return Math.min(cost[length][0],cost[length][1],cost[length][2]);
+ 
+ 
+ //matrix of n by n dimension
+ in sorted order
+ each row is sorted
+ previous rows last element is smaller than next rows 1st element
+ 
+ there is a number...check if the number is present in that matrix
+ 
+ 
+mat[][] = {{8,10,15,18},{20,27,30,35},{40,45,48,52}}
+ 
+ x= 45
+ 
+ 
+ //
+ 
+ i=0;
+ j=size-1;
+ 
+ given input:ele
+ 
+ while(i<size &&  j>=0)
+ {
+   if(matrix[i][j]==ele)
+   {
+     sopln(i and j);
+   }
+   if(matrix[i][j]<ele)
+   {
+     i++;
+   }
+   //takes 
+   if(matrix[i][j]>ele)
+   {
+     j--;
+   }
+   
+ }
+ 
+ 16 =4
+ 
+ 
+ 3rd round
+ 
+ square root of a number,can return double
+ 17 square root
+ public double squareroot (doube n){
+   
+   
+   
+ }
+ find the second largest element bst
+ iterative traversal of inorder in binary tree
+ 
+ 
+ 
+ 
+ WALMART
+ 1st Round
+ 
+ 1,2
+2-5
+5-6
+5-8
+===
+8
+
+
+
+Find the starting point
+also,what if they are repeating
+so here lets take a map of integer and integer
+
+
+so here..
+Map
+
+key.   value
+1	2
+2.         5
+5         6
+5         8
+
+
+Now I will take a destination map
+
+Key.    Value
+2	1
+5.        2
+6          5
+8          5
+
+
+Iterate through the original src->dest mp
+And check if that that src key is present in dest map’s key’s
+If not present that will be the starting point
+
+Src=
+
+Starting point = 1
+
+//storing the source map
+Map<Integer,Integer> mp=new HashMap<>();
+Int src[]={1,2,5,5};
+Int dest[]={2,5,6,8};
+
+Int n=src.length;
+Int k=dest.length;
+If(k!==n)
+Return -1;
+For(int i=0;i<n;i++)
+{
+
+Mp.put(src[i],dest[i]);
+}
+
+//this populates the source as key and dest as value
+
+
+Now we take the dest as key and value as source
+Map<Integer,Integet> destMp=new HashMap<>();
+
+For(int i=0;i<n;i++)
+{
+
+destMp.put(dest[i],src[i]);
+}
+
+Integer x=null;
+//iterating through the original map
+For(Map.Entry<Integer,Integer> m:mp.entrySet())
+{
+If(!destMp.containsKey(m.getKey())
+{
+
+X=m.getKey();
+Return x;
+
+}
+}
+If(x==null)
+{
+Return -1;
+}
+
+
+BALANCED PARANTHESIS
+[{()}]
+USE STACK
+Use case
+I=0
+
+
+[{())}]
+
+[{
+
+ALSO LIST OF COMMANDS
+CD a
+a -> b,c
+b->c,d
+
+check with list of commands if given sequence of commands is correct
+cd a
+cd b
+cd c
+..
+cd e
+
+
+use stack
+
+
+
+2nd round
+give examples of singleton pattern
+write singleton class
+make singleton class thread safe
+explain class level cocking and object level locking woth synchronized
+design two threads printing vowels and consonants similar to odd and even nos
+what is con current hashmap
+what if update and get operation on same key at same time
+use join
+what is thread pool
+why executor servoice
+diff type of executor service
+what is thread local
+what is volatile
+what is runnable callable
+difference what does it do
+Class Singleton
+{
+Private static Singleton object=null;
+Private Singleton()
+{
+}
+
+Private ¬¬¬¬synchronizedized static Singleton getObject()
+{
+   If(object==null)
+    {
+     object=new Singleton();
+}
+Return object;
+}
+
+
+Class Main
+{
+System giving a stream of characters
+These characters can be vowels and consonants to be produced by two different systems
+
+Class CharactersResult
+{
+
+Char A[]={‘a’,’b,c,d,e,f,g,h,I,j…}
+ArrayList<Character> vowels={‘a’,e,I,o,u};
+Public void printConsonants()
+{
+Synchronized(this)
+{
+
+While(vowels.contains(a[i]))
+{
+      Wait();
+
+
+}
+SOPLN(a[i]);
+i
+notify();
+}
+
+
+Public void printVowels ()
+{
+Synchronized(this)
+{
+
+While(!vowels.contains(a[i]))
+{
+      Wait();
+}
+System.out.println(a[i]);
+I++;
+Notify();
+
+
+}
+}
+
+
+
+}
+class Main
+{
+Public static void main(String[] args)
+{
+CharacterResult cr=new CharacterResult();
+Thread t1=new Thread(new Runnable()
+{
+@Override
+Public void run()
+{
+Cr.printConsonants();
+}});
+
+Thread t2=new Thread(new Runnable()
+{
+@Override
+Public void run()
+{
+Cr.printVowels ();
+}});
+
+T1.start();
+
+T2.start();
+
+}
+
+
+ 
+
+
+
+
+THIRD ROUND
+suppose db returns list of records with employee id,name and email id
+and db records have redundant data
+with repeated email ids and names for dofferent records
+return unique list
+
+anser
+equals and hashcode
+hashcode used for different bucket location
+why we need to override hashcode when we get equals method
+what is concurrent hashmap
+explain project architecture
+how to do connection pooling in java
+how to connect to database in java code
+define solid principles
+
+
+GROUPON 2nd round
+explian functionalities of movie ticket system
+explain db design
+
+
+third round
+explain project architecture
+hr questions
+
+
+
+salesforce first round
+advantages of java
+disadvanytage of java
+
+slower execution
+bytecode and jit
+
+garbage ciollection
+low performance etc
+
+Minimum number of jumps to reach end
+check whether we can reach end of array by jumps .returns yes or no
+
+
+Salesforce 2 nd round
+Next greater element of each element i array and return array
+next greater element of each element in circular array
+what is micrservice and monolithic architecture
+
+
+
+vmware 1 round
+what is collision in hashmap
+how to achieve worst complecxity in hashmap
+what we can do to improve it
+design a datastructure in o(1) time
+'only remove add and search
+no random
+only hashmap required
+
+https://www.geeksforgeeks.org/job-sequencing-problem/
